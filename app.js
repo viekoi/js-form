@@ -57,10 +57,10 @@ const app = {
     });
     //onSelectData
     tableContent.addEventListener("click", (e) => {
-      createStudentForm.reset();
       const dataRow = e.target.closest(".table-row");
-
+      
       if (dataRow) {
+        createStudentForm.reset();
         // Handle when clicking on the row
         const data = _this.people[Number(dataRow.dataset.index)];
         for (const key in data) {
